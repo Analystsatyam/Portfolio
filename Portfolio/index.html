@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Satyam Kumar - Data Engineer specializing in AWS, PySpark, Databricks, and Big Data technologies. Building scalable data pipelines and solutions.">
+    <meta name="keywords" content="Data Engineer, AWS, PySpark, Databricks, Big Data, ETL, Data Pipelines, Satyam Kumar">
+    <meta name="author" content="Satyam Kumar">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Satyam Kumar | Data Engineer">
+    <meta property="og:description" content="Data Engineer specializing in AWS, PySpark, Databricks, and Big Data technologies.">
+
+    <title>Satyam Kumar | Data Engineer</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128202;</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>SK<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="data-stream" id="data-stream"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Satyam Kumar</h1>
+                <div class="hero-title-wrapper">
+                    <span class="hero-title-prefix">A</span>
+                    <h2 class="hero-title" id="typed-title"></h2>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Building scalable data pipelines and transforming raw data into actionable insights.
+                    Specialized in AWS, PySpark, and cloud-native data solutions.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Get in Touch
+                    </a>
+                    <a href="resume/Satyam_Kumar_Resume.pdf" class="btn btn-secondary" download>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="tech-orbit">
+                    <div class="orbit-ring orbit-ring-1">
+                        <div class="orbit-item" data-tooltip="AWS">
+                            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.75 11.35a4.32 4.32 0 0 0-.79-.06 4.33 4.33 0 0 0-1.97.47 4.29 4.29 0 0 0-5.92-1.21A4.23 4.23 0 0 0 8.5 12a4.17 4.17 0 0 0 .06.63 3.22 3.22 0 0 0-1.88 2.92 3.22 3.22 0 0 0 3.22 3.22h8.85a3.22 3.22 0 0 0 3.22-3.22 3.22 3.22 0 0 0-3.22-4.2z"/></svg>
+                        </div>
+                    </div>
+                    <div class="orbit-ring orbit-ring-2">
+                        <div class="orbit-item" data-tooltip="Spark">
+                            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                    </div>
+                    <div class="orbit-ring orbit-ring-3">
+                        <div class="orbit-item" data-tooltip="Python">
+                            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c-1.66 0-3 1.34-3 3v1h6V5c0-1.66-1.34-3-3-3zm-3 6v10c0 1.66 1.34 3 3 3s3-1.34 3-3V8H9z"/></svg>
+                        </div>
+                    </div>
+                    <div class="center-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5z"/>
+                            <path d="M14 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5z"/>
+                            <path d="M4 15a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4z"/>
+                            <path d="M14 15a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-4z"/>
+                            <path d="M7 10v4M17 10v4M10 7h4M10 17h4"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Introduction</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-lead">
+                        I'm a passionate <strong>Data Engineer</strong> with hands-on expertise in building
+                        scalable data pipelines and cloud-native solutions. Currently working at
+                        <strong>Concert AI</strong>, I specialize in transforming complex data challenges
+                        into efficient, automated workflows.
+                    </p>
+                    <p>
+                        With over <strong>2+ years of experience</strong> at industry leaders like Deloitte
+                        and Concert AI, I've consistently delivered solutions that improve performance by
+                        40-65% and reduce manual intervention by up to 95%. My work spans healthcare analytics,
+                        financial services, and enterprise data platforms.
+                    </p>
+                    <p>
+                        I'm driven by the challenge of optimizing data systems at scale, whether it's
+                        re-engineering legacy ETL pipelines, designing event-driven architectures, or
+                        building real-time data processing solutions.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-number">2+</div>
+                            <div class="highlight-label">Years Experience</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">6</div>
+                            <div class="highlight-label">Certifications</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">300M+</div>
+                            <div class="highlight-label">Rows Processed</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">65%</div>
+                            <div class="highlight-label">Avg Performance Gain</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <span class="window-dot red"></span>
+                            <span class="window-dot yellow"></span>
+                            <span class="window-dot green"></span>
+                            <span class="window-title">satyam_profile.py</span>
+                        </div>
+                        <div class="window-content">
+                            <pre><code><span class="code-keyword">class</span> <span class="code-class">DataEngineer</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(<span class="code-param">self</span>):
+        <span class="code-param">self</span>.name = <span class="code-string">"Satyam Kumar"</span>
+        <span class="code-param">self</span>.role = <span class="code-string">"Data Engineer"</span>
+        <span class="code-param">self</span>.location = <span class="code-string">"Bangalore, India"</span>
+
+    <span class="code-keyword">def</span> <span class="code-function">skills</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">return</span> [
+            <span class="code-string">"PySpark"</span>, <span class="code-string">"AWS"</span>,
+            <span class="code-string">"Databricks"</span>, <span class="code-string">"Airflow"</span>,
+            <span class="code-string">"SQL"</span>, <span class="code-string">"Python"</span>
+        ]
+
+    <span class="code-keyword">def</span> <span class="code-function">passion</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">return</span> <span class="code-string">"Building scalable
+               data solutions"</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+            </div>
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h3 class="category-title">Programming</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Big Data Technologies -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                            </svg>
+                        </div>
+                        <h3 class="category-title">Big Data</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Apache Spark / PySpark</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Spark SQL</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Apache Kafka</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Apache Hive</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud Platforms -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="category-title">Cloud Platforms</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">AWS (S3, EC2, Glue, EMR, Redshift)</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Databricks</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Azure (ADLS, ADF)</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps & Tools -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="category-title">DevOps & Tools</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Apache Airflow</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Docker & Kubernetes</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git & Linux</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Modeling</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career</span>
+                <h2 class="section-title">Work Experience</h2>
+            </div>
+            <div class="timeline">
+                <!-- Concert AI -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <h3>Concert AI</h3>
+                                <span class="timeline-role">Data Engineer</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Sep 2025 - Present</span>
+                                <span class="timeline-badge current">Current</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <span class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                <span>Converted Python notebook to AWS Glue + PySpark pipeline, <strong>reducing ML model runtime by ~65%</strong> and delivering 3x faster processing on multi-GB datasets</span>
+                            </li>
+                            <li>
+                                <span class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                <span>Automated schema creation by cloning 200+ tables, reducing environment setup time from 1-2 hours to <strong>&lt;10 minutes</strong></span>
+                            </li>
+                            <li>
+                                <span class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                <span>Designed pipelines to union data across three large schemas (<strong>~300M rows</strong>) and built dedicated breast-cancer schemas, improving data completeness to <strong>99%+</strong></span>
+                            </li>
+                            <li>
+                                <span class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                <span>Built QC validation schemas and optimized Redshift SQL operations, <strong>reducing production defects by ~50%</strong> and improving job stability by 90%</span>
+                            </li>
+                            <li>
+                                <span class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                <span>Automated Precision360 Excel export, reducing manual work from 45-60 minutes to 2-3 minutes (<strong>~95% productivity gain</strong>)</span>
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">AWS Glue</span>
+                            <span class="tech-tag">PySpark</span>
+                            <span class="tech-tag">Redshift</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deloitte -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <h3>Deloitte</h3>
+                                <span class="timeline-role">Data Engineer</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Feb 2023 - Sep 2025</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <span class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                <span>Built reusable data blocks for stakeholder use cases including product eligibility, behaviour insights, UX optimization, and digital signature adoption</span>
+                            </li>
+                            <li>
+                                <span class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                <span>Built end-to-end ingestion and transformation pipeline from DynamoDB to S3, enabling digital signature replacement for manual paper forms</span>
+                            </li>
+                            <li>
+                                <span class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                <span>Enabled event-driven data processing with AWS Glue and S3, <strong>speeding up data availability by 40%</strong>. Optimized client data models by reducing schema complexity by ~50%</span>
+                            </li>
+                            <li>
+                                <span class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                <span>Re-engineered legacy ETL jobs from Informatica to PySpark, <strong>improving performance by ~40%</strong> with AWS-native architecture</span>
+                            </li>
+                            <li>
+                                <span class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                <span>Designed Airflow DAGs for pipeline orchestration, <strong>reducing manual intervention by 80-90%</strong></span>
+                            </li>
+                            <li>
+                                <span class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                <span>Developed low-code internal tool using Power Apps + Power Automate to streamline assessments across business units</span>
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">AWS S3</span>
+                            <span class="tech-tag">AWS Glue</span>
+                            <span class="tech-tag">PySpark</span>
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">Power Automate</span>
+                        </div>
+                        <div class="timeline-awards">
+                            <div class="award-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"/>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                                </svg>
+                                <span><strong>Spot Award</strong> - Internal ILA Assessment Tool</span>
+                            </div>
+                            <div class="award-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"/>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                                </svg>
+                                <span><strong>Applause Award</strong> - Outstanding Impact as Data Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="timeline-item education" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-marker">
+                        <div class="marker-dot education"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <h3>Jain University</h3>
+                                <span class="timeline-role">Master of Computer Applications (MCA)</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Mar 2023 - May 2025</span>
+                                <span class="timeline-location">Bangalore, Karnataka</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item education" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-marker">
+                        <div class="marker-dot education"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <h3>CMR University</h3>
+                                <span class="timeline-role">Bachelor of Computer Applications (BCA)</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Jul 2019 - May 2022</span>
+                                <span class="timeline-location">Bangalore, Karnataka</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Key Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">Healthcare Data Pipeline</h3>
+                    <p class="project-description">
+                        Built scalable pipelines to union data across three large schemas (~300M rows)
+                        for healthcare analytics. Designed dedicated breast-cancer schemas achieving
+                        99%+ data completeness and ~40% query performance improvement.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">300M+</span>
+                            <span class="metric-label">Rows Processed</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">99%+</span>
+                            <span class="metric-label">Data Completeness</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>AWS Glue</span>
+                        <span>PySpark</span>
+                        <span>Redshift</span>
+                        <span>S3</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">ML Pipeline Optimization</h3>
+                    <p class="project-description">
+                        Converted Python notebook to fully optimized AWS Glue + PySpark pipeline
+                        by rewriting entire logic in Spark. Achieved 3x faster processing on
+                        multi-GB datasets with significant runtime reduction.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">65%</span>
+                            <span class="metric-label">Runtime Reduction</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">3x</span>
+                            <span class="metric-label">Faster Processing</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>PySpark</span>
+                        <span>AWS Glue</span>
+                        <span>Python</span>
+                        <span>ML</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">Legacy ETL Modernization</h3>
+                    <p class="project-description">
+                        Re-engineered legacy ETL jobs from Informatica to PySpark, ensuring
+                        compatibility with AWS-native architecture. Built scalable ingestion
+                        pipelines for standardized raw vendor and drug order data.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">40%</span>
+                            <span class="metric-label">Performance Gain</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">90%</span>
+                            <span class="metric-label">Less Manual Work</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>PySpark</span>
+                        <span>Airflow</span>
+                        <span>AWS S3</span>
+                        <span>Informatica</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">Event-Driven Data Platform</h3>
+                    <p class="project-description">
+                        Enabled event-driven data processing with AWS Glue and S3. Built
+                        end-to-end ingestion and transformation pipeline from DynamoDB to S3,
+                        enabling digital signature adoption replacing manual paper forms.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">40%</span>
+                            <span class="metric-label">Faster Data Availability</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">50%</span>
+                            <span class="metric-label">Schema Simplification</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>AWS Glue</span>
+                        <span>S3</span>
+                        <span>DynamoDB</span>
+                        <span>Event-Driven</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20h9"/>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">Internal Assessment Tool</h3>
+                    <p class="project-description">
+                        Independently developed a low-code internal tool using Power Apps +
+                        Power Automate to streamline assessments. Implemented automated alerting
+                        for AWS Glue job failures via Microsoft Teams.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">Award</span>
+                            <span class="metric-label">Spot Award Winner</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">95%</span>
+                            <span class="metric-label">Efficiency Boost</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Power Apps</span>
+                        <span>Power Automate</span>
+                        <span>MS Teams</span>
+                        <span>Low-Code</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">QC Validation Framework</h3>
+                    <p class="project-description">
+                        Built QC validation schemas and optimized Redshift SQL operations.
+                        Automated Precision360 Excel export (multi-sheet), drastically
+                        improving analyst productivity and data quality.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">50%</span>
+                            <span class="metric-label">Fewer Defects</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">90%</span>
+                            <span class="metric-label">Job Stability</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Redshift</span>
+                        <span>SQL</span>
+                        <span>Python</span>
+                        <span>Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Credentials</span>
+                <h2 class="section-title">Certifications</h2>
+            </div>
+            <div class="certifications-grid">
+                <!-- AWS Solutions Architect Professional -->
+                <div class="cert-card" data-aos="fade-up">
+                    <div class="cert-badge aws">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.75 11.35a4.32 4.32 0 0 0-.79-.06 4.33 4.33 0 0 0-1.97.47 4.29 4.29 0 0 0-5.92-1.21A4.23 4.23 0 0 0 8.5 12a4.17 4.17 0 0 0 .06.63 3.22 3.22 0 0 0-1.88 2.92 3.22 3.22 0 0 0 3.22 3.22h8.85a3.22 3.22 0 0 0 3.22-3.22 3.22 3.22 0 0 0-3.22-4.2z"/>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">AWS Solutions Architect</h3>
+                        <span class="cert-level">Professional</span>
+                        <p class="cert-issuer">Amazon Web Services</p>
+                    </div>
+                    <a href="certifications/AWS Certified Solutions Architect - Professional certificate.pdf" class="cert-link" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- AWS Solutions Architect Associate -->
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-badge aws">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.75 11.35a4.32 4.32 0 0 0-.79-.06 4.33 4.33 0 0 0-1.97.47 4.29 4.29 0 0 0-5.92-1.21A4.23 4.23 0 0 0 8.5 12a4.17 4.17 0 0 0 .06.63 3.22 3.22 0 0 0-1.88 2.92 3.22 3.22 0 0 0 3.22 3.22h8.85a3.22 3.22 0 0 0 3.22-3.22 3.22 3.22 0 0 0-3.22-4.2z"/>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">AWS Solutions Architect</h3>
+                        <span class="cert-level">Associate</span>
+                        <p class="cert-issuer">Amazon Web Services</p>
+                    </div>
+                    <a href="certifications/AWS Certified Solutions Architect - Associate certificate.pdf" class="cert-link" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- AWS Developer Associate -->
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-badge aws">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.75 11.35a4.32 4.32 0 0 0-.79-.06 4.33 4.33 0 0 0-1.97.47 4.29 4.29 0 0 0-5.92-1.21A4.23 4.23 0 0 0 8.5 12a4.17 4.17 0 0 0 .06.63 3.22 3.22 0 0 0-1.88 2.92 3.22 3.22 0 0 0 3.22 3.22h8.85a3.22 3.22 0 0 0 3.22-3.22 3.22 3.22 0 0 0-3.22-4.2z"/>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">AWS Developer</h3>
+                        <span class="cert-level">Associate</span>
+                        <p class="cert-issuer">Amazon Web Services</p>
+                    </div>
+                    <a href="certifications/AWS Certified Developer - Associate certificate.pdf" class="cert-link" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- AWS Cloud Practitioner -->
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-badge aws">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.75 11.35a4.32 4.32 0 0 0-.79-.06 4.33 4.33 0 0 0-1.97.47 4.29 4.29 0 0 0-5.92-1.21A4.23 4.23 0 0 0 8.5 12a4.17 4.17 0 0 0 .06.63 3.22 3.22 0 0 0-1.88 2.92 3.22 3.22 0 0 0 3.22 3.22h8.85a3.22 3.22 0 0 0 3.22-3.22 3.22 3.22 0 0 0-3.22-4.2z"/>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">AWS Cloud Practitioner</h3>
+                        <span class="cert-level">Foundational</span>
+                        <p class="cert-issuer">Amazon Web Services</p>
+                    </div>
+                    <a href="certifications/AWS Certified Cloud Practitioner certificate.pdf" class="cert-link" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Databricks Data Engineer -->
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cert-badge databricks">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Databricks Data Engineer</h3>
+                        <span class="cert-level">Associate</span>
+                        <p class="cert-issuer">Databricks</p>
+                    </div>
+                    <a href="certifications/DATABRICKS CERTIFIED DATA ENGINEER ASSO.png" class="cert-link" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Microsoft Fabric DP-700 -->
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="cert-badge azure">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M5.5 3H9v8.5H3V6.5A3 3 0 0 1 5.5 3zM3 14.5V18a3 3 0 0 0 3 3h3.5V14.5H3zM14.5 21H18a3 3 0 0 0 3-3v-3.5h-6.5V21zM21 9.5V6a3 3 0 0 0-3-3h-3.5v6.5H21z"/>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Microsoft Fabric Analytics</h3>
+                        <span class="cert-level">DP-700</span>
+                        <p class="cert-issuer">Microsoft</p>
+                    </div>
+                    <a href="certifications/DP700fabric.pdf" class="cert-link" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        I'm always interested in discussing data engineering challenges,
+                        new opportunities, or potential collaborations. Feel free to reach out!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:satyamkumar2107@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">satyamkumar2107@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+917042746946" class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">Phone</span>
+                                <span class="method-value">+91 7042746946</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/satyam-kumar-2078741a1/" class="contact-method" target="_blank" rel="noopener noreferrer">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">LinkedIn</span>
+                                <span class="method-value">Connect with me</span>
+                            </div>
+                        </a>
+                        <div class="contact-method location">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">Location</span>
+                                <span class="method-value">Bangalore, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <div class="resume-card">
+                        <div class="resume-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3>Download My Resume</h3>
+                        <p>Get a detailed overview of my experience, skills, and achievements.</p>
+                        <a href="resume/Satyam_Kumar_Resume.pdf" class="btn btn-primary" download>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>SK<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Building data pipelines that scale.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="mailto:satyamkumar2107@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/satyam-kumar-2078741a1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/satyamkumar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Satyam Kumar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
