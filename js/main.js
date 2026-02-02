@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initSkillBars();
     initDataStream();
+    initBinaryRain();
+    initDataFlowLines();
+    initCounterAnimation();
+    initPipelineNodes();
 });
 
 // ===== Navigation =====
@@ -92,10 +96,11 @@ function initTypingAnimation() {
     const typedElement = document.getElementById('typed-title');
     const titles = [
         'Data Engineer',
+        'Pipeline Architect',
         'PySpark Expert',
         'AWS Specialist',
-        'Pipeline Architect',
-        'Cloud Engineer'
+        'Spark Wizard',
+        'ETL Craftsman'
     ];
 
     let titleIndex = 0;
@@ -254,6 +259,162 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// ===== Binary Rain Effect =====
+function initBinaryRain() {
+    const dataStream = document.getElementById('data-stream');
+    if (!dataStream) return;
+
+    // Create binary rain container
+    const binaryRain = document.createElement('div');
+    binaryRain.className = 'binary-rain';
+    dataStream.appendChild(binaryRain);
+
+    // Create multiple binary columns
+    const columnCount = Math.floor(window.innerWidth / 60);
+
+    for (let i = 0; i < columnCount; i++) {
+        createBinaryColumn(binaryRain, i, columnCount);
+    }
+}
+
+function createBinaryColumn(container, index, total) {
+    const column = document.createElement('div');
+    column.className = 'binary-column';
+
+    // Generate random binary/data characters
+    const chars = '01｛｝[]<>═║╔╗╚╝├┤┬┴┼━│';
+    const length = Math.floor(Math.random() * 20) + 10;
+    let text = '';
+    for (let i = 0; i < length; i++) {
+        text += chars[Math.floor(Math.random() * chars.length)];
+    }
+    column.textContent = text;
+
+    // Position and timing
+    const left = (index / total) * 100;
+    const delay = Math.random() * 10;
+    const duration = Math.random() * 15 + 10;
+
+    column.style.cssText = `
+        left: ${left}%;
+        animation-delay: ${delay}s;
+        animation-duration: ${duration}s;
+        font-size: ${Math.random() * 6 + 10}px;
+    `;
+
+    container.appendChild(column);
+}
+
+// ===== Data Flow Lines =====
+function initDataFlowLines() {
+    const dataStream = document.getElementById('data-stream');
+    if (!dataStream) return;
+
+    // Create flowing data lines
+    const lineCount = 5;
+
+    for (let i = 0; i < lineCount; i++) {
+        const line = document.createElement('div');
+        line.className = 'data-flow-line';
+
+        const top = Math.random() * 80 + 10;
+        const delay = Math.random() * 5;
+        const duration = Math.random() * 3 + 2;
+        const width = Math.random() * 200 + 100;
+
+        line.style.cssText = `
+            top: ${top}%;
+            width: ${width}px;
+            animation-delay: ${delay}s;
+            animation-duration: ${duration}s;
+        `;
+
+        dataStream.appendChild(line);
+    }
+}
+
+// ===== Counter Animation =====
+function initCounterAnimation() {
+    const counters = document.querySelectorAll('.highlight-number[data-count]');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+}
+
+function animateCounter(element) {
+    const target = parseFloat(element.dataset.count);
+    const suffix = element.dataset.suffix || '';
+    const isDecimal = element.dataset.decimal === 'true';
+    const duration = 2000;
+    const startTime = performance.now();
+
+    function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function for smooth animation
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const current = target * easeOutQuart;
+
+        if (isDecimal) {
+            element.textContent = current.toFixed(1) + suffix;
+        } else {
+            element.textContent = Math.floor(current) + suffix;
+        }
+
+        if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+        }
+    }
+
+    requestAnimationFrame(updateCounter);
+}
+
+// ===== Pipeline Nodes Animation =====
+function initPipelineNodes() {
+    const dataStream = document.getElementById('data-stream');
+    if (!dataStream) return;
+
+    // Create pipeline connection nodes
+    const nodeCount = 8;
+
+    for (let i = 0; i < nodeCount; i++) {
+        const node = document.createElement('div');
+        node.className = 'pipeline-node';
+
+        const left = Math.random() * 80 + 10;
+        const top = Math.random() * 80 + 10;
+        const delay = Math.random() * 2;
+        const scale = Math.random() * 0.5 + 0.5;
+
+        node.style.cssText = `
+            left: ${left}%;
+            top: ${top}%;
+            animation-delay: ${delay}s;
+            transform: scale(${scale});
+            opacity: ${0.3 + Math.random() * 0.3};
+        `;
+
+        dataStream.appendChild(node);
+    }
+}
+
 // ===== Additional Utilities =====
 
 // Debounce function for performance
@@ -307,27 +468,42 @@ function initLazyLoading() {
 
 // ===== Console Easter Egg =====
 console.log(`
-%c ____        _                         _  __
-%c/ ___|  __ _| |_ _   _  __ _ _ __ ___ | |/ /   _ _ __ ___   __ _ _ __
-%c\\___ \\ / _\` | __| | | |/ _\` | '_ \` _ \\| ' / | | | '_ \` _ \\ / _\` | '__|
-%c ___) | (_| | |_| |_| | (_| | | | | | | . \\ |_| | | | | | | (_| | |
-%c|____/ \\__,_|\\__|\\__, |\\__,_|_| |_| |_|_|\\_\\__,_|_| |_| |_|\\__,_|_|
-%c                 |___/
+%c ╔═══════════════════════════════════════════════════════════════╗
+%c ║                                                               ║
+%c ║   ███████╗ █████╗ ████████╗██╗   ██╗ █████╗ ███╗   ███╗      ║
+%c ║   ██╔════╝██╔══██╗╚══██╔══╝╚██╗ ██╔╝██╔══██╗████╗ ████║      ║
+%c ║   ███████╗███████║   ██║    ╚████╔╝ ███████║██╔████╔██║      ║
+%c ║   ╚════██║██╔══██║   ██║     ╚██╔╝  ██╔══██║██║╚██╔╝██║      ║
+%c ║   ███████║██║  ██║   ██║      ██║   ██║  ██║██║ ╚═╝ ██║      ║
+%c ║   ╚══════╝╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝╚═╝     ╚═╝      ║
+%c ║                                                               ║
+%c ╠═══════════════════════════════════════════════════════════════╣
+%c ║  🚀 Data Engineer | 3 Years Experience                       ║
+%c ║  ⚡ 300M+ Rows Processed | 99.9%% Pipeline Reliability        ║
+%c ║  🔧 PySpark • AWS Glue • Airflow • Kafka • Redshift          ║
+%c ╚═══════════════════════════════════════════════════════════════╝
 %c
-%cData Engineer | AWS | PySpark | Databricks
-%c
-%cWelcome to my portfolio! Feel free to explore.
-%cBuilt with vanilla HTML, CSS, and JavaScript.
+%c  > Pipeline Status: OPERATIONAL ✓
+%c  > Data Integrity: 99.9%% ✓
+%c  > Welcome to my portfolio!
 `,
-'color: #3b82f6; font-weight: bold;',
-'color: #3b82f6; font-weight: bold;',
+'color: #3b82f6;',
+'color: #3b82f6;',
 'color: #06b6d4; font-weight: bold;',
 'color: #06b6d4; font-weight: bold;',
-'color: #10b981; font-weight: bold;',
-'color: #10b981; font-weight: bold;',
-'color: #6b7280;',
-'color: #9ca3af; font-style: italic;',
+'color: #06b6d4; font-weight: bold;',
+'color: #06b6d4; font-weight: bold;',
+'color: #06b6d4; font-weight: bold;',
+'color: #06b6d4; font-weight: bold;',
+'color: #3b82f6;',
+'color: #3b82f6;',
+'color: #10b981;',
+'color: #10b981;',
+'color: #10b981;',
+'color: #3b82f6;',
 'color: #6b7280;',
 'color: #10b981;',
-'color: #6b7280;'
+'color: #10b981;',
+'color: #9ca3af;'
 );
+
