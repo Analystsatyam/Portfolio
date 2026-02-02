@@ -51,6 +51,38 @@
     <section id="home" class="hero">
         <div class="hero-background">
             <div class="data-stream" id="data-stream"></div>
+            <div class="pipeline-viz" id="pipeline-viz">
+                <svg class="pipeline-svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
+                    <!-- Animated pipeline paths -->
+                    <defs>
+                        <linearGradient id="pipeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0" />
+                            <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#10b981;stop-opacity:0" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <!-- Data source node -->
+                    <circle cx="100" cy="200" r="8" fill="#3b82f6" filter="url(#glow)" class="pulse-node"/>
+                    <!-- Pipeline paths -->
+                    <path d="M 108 200 Q 300 100, 500 200 T 900 200 T 1100 200"
+                          fill="none" stroke="rgba(59,130,246,0.1)" stroke-width="2" stroke-dasharray="8,8"/>
+                    <path d="M 108 200 Q 300 100, 500 200 T 900 200 T 1100 200"
+                          fill="none" stroke="url(#pipeGradient)" stroke-width="3" class="data-path"/>
+                    <!-- Processing nodes -->
+                    <circle cx="400" cy="150" r="6" fill="#06b6d4" filter="url(#glow)" class="pulse-node" style="animation-delay: 0.5s"/>
+                    <circle cx="700" cy="200" r="6" fill="#8b5cf6" filter="url(#glow)" class="pulse-node" style="animation-delay: 1s"/>
+                    <circle cx="1000" cy="180" r="6" fill="#10b981" filter="url(#glow)" class="pulse-node" style="animation-delay: 1.5s"/>
+                    <!-- Data destination -->
+                    <rect x="1080" y="185" width="30" height="30" rx="4" fill="#10b981" filter="url(#glow)" class="pulse-node" style="animation-delay: 2s"/>
+                </svg>
+            </div>
         </div>
         <div class="hero-content">
             <div class="hero-text">
@@ -62,8 +94,8 @@
                     <span class="cursor">|</span>
                 </div>
                 <p class="hero-description">
-                    Building scalable data pipelines and transforming raw data into actionable insights.
-                    Specialized in AWS, PySpark, and cloud-native data solutions.
+                    Architecting production-grade data pipelines that process <strong>300M+ records</strong> with
+                    <strong>99.9% reliability</strong>. Transforming raw data into actionable insights at scale.
                 </p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn btn-primary">
@@ -73,7 +105,7 @@
                         </svg>
                         Get in Touch
                     </a>
-                    <a href="resume/Satyam_Kumar_Resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                    <a href="resume/Satyam_Kumar.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                             <polyline points="14 2 14 8 20 8"/>
@@ -131,38 +163,38 @@
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-lead">
-                        I'm a passionate <strong>Data Engineer</strong> with hands-on expertise in building
-                        scalable data pipelines and cloud-native solutions. Currently working at
-                        <strong>Concert AI</strong>, I specialize in transforming complex data challenges
-                        into efficient, automated workflows.
+                        I'm a passionate <strong>Data Engineer</strong> with hands-on expertise in designing
+                        scalable ETL and streaming data platforms. Currently architecting data solutions at
+                        <strong>Concert AI</strong>, I specialize in building production-grade pipelines
+                        using Glue, PySpark, Airflow, Kafka, and Redshift.
                     </p>
                     <p>
                         With <strong>3 years of experience</strong> at industry leaders like Deloitte
                         and Concert AI, I've consistently delivered solutions that improve performance by
-                        40-65% and reduce manual intervention by up to 95%. My work spans healthcare analytics,
-                        financial services, and enterprise data platforms.
+                        40-65% and reduce manual intervention by up to 95%. I've architected solutions for
+                        large-scale enterprise datasets processing <strong>300M+ records</strong>.
                     </p>
                     <p>
                         I'm driven by the challenge of optimizing data systems at scale, whether it's
-                        re-engineering legacy ETL pipelines, designing event-driven architectures, or
-                        building real-time data processing solutions.
+                        re-architecting ML data processing pipelines, designing controller-based workflow
+                        orchestration, or building event-driven architectures with 99.9% reliability.
                     </p>
                     <div class="about-highlights">
                         <div class="highlight-item">
-                            <div class="highlight-number">3</div>
+                            <div class="highlight-number" data-count="3">0</div>
                             <div class="highlight-label">Years Experience</div>
                         </div>
                         <div class="highlight-item">
-                            <div class="highlight-number">6</div>
-                            <div class="highlight-label">Certifications</div>
+                            <div class="highlight-number" data-count="100">0</div>
+                            <div class="highlight-label">Production DAGs</div>
                         </div>
                         <div class="highlight-item">
-                            <div class="highlight-number">300M+</div>
+                            <div class="highlight-number" data-count="300" data-suffix="M+">0</div>
                             <div class="highlight-label">Rows Processed</div>
                         </div>
                         <div class="highlight-item">
-                            <div class="highlight-number">65%</div>
-                            <div class="highlight-label">Avg Performance Gain</div>
+                            <div class="highlight-number" data-count="99.9" data-suffix="%" data-decimal="true">0</div>
+                            <div class="highlight-label">Pipeline Reliability</div>
                         </div>
                     </div>
                 </div>
@@ -175,22 +207,21 @@
                             <span class="window-title">satyam_profile.py</span>
                         </div>
                         <div class="window-content">
-                            <pre><code><span class="code-keyword">class</span> <span class="code-class">DataEngineer</span>:
+                            <pre><code class="typing-code"><span class="code-keyword">class</span> <span class="code-class">DataEngineer</span>:
     <span class="code-keyword">def</span> <span class="code-function">__init__</span>(<span class="code-param">self</span>):
         <span class="code-param">self</span>.name = <span class="code-string">"Satyam Kumar"</span>
-        <span class="code-param">self</span>.role = <span class="code-string">"Data Engineer"</span>
-        <span class="code-param">self</span>.location = <span class="code-string">"Bangalore, India"</span>
+        <span class="code-param">self</span>.experience = <span class="code-string">"3 years"</span>
+        <span class="code-param">self</span>.pipelines = <span class="code-number">100</span>+ <span class="code-comment"># DAGs</span>
 
-    <span class="code-keyword">def</span> <span class="code-function">skills</span>(<span class="code-param">self</span>):
-        <span class="code-keyword">return</span> [
-            <span class="code-string">"PySpark"</span>, <span class="code-string">"AWS"</span>,
-            <span class="code-string">"Databricks"</span>, <span class="code-string">"Airflow"</span>,
-            <span class="code-string">"SQL"</span>, <span class="code-string">"Python"</span>
-        ]
+    <span class="code-keyword">def</span> <span class="code-function">tech_stack</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">return</span> {
+            <span class="code-string">"compute"</span>: [<span class="code-string">"PySpark"</span>, <span class="code-string">"Glue"</span>],
+            <span class="code-string">"orchestrate"</span>: [<span class="code-string">"Airflow"</span>],
+            <span class="code-string">"stream"</span>: [<span class="code-string">"Kafka"</span>],
+        }
 
-    <span class="code-keyword">def</span> <span class="code-function">passion</span>(<span class="code-param">self</span>):
-        <span class="code-keyword">return</span> <span class="code-string">"Building scalable
-               data solutions"</span></code></pre>
+    <span class="code-keyword">def</span> <span class="code-function">impact</span>(<span class="code-param">self</span>) -> <span class="code-class">dict</span>:
+        <span class="code-keyword">return</span> {<span class="code-string">"runtime"</span>: <span class="code-string">"-65%"</span>}</code></pre>
                         </div>
                     </div>
                 </div>
@@ -417,7 +448,7 @@
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
                                 </span>
-                                <span>Converted Python notebook to AWS Glue + PySpark pipeline, <strong>reducing ML model runtime by ~65%</strong> and delivering 3x faster processing on multi-GB datasets</span>
+                                <span>Re-architected ML data processing from notebook-based execution to distributed AWS Glue + PySpark pipelines, <strong>reducing runtime by 65%</strong> and enabling 3x faster processing</span>
                             </li>
                             <li>
                                 <span class="achievement-icon">
@@ -425,7 +456,7 @@
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
                                 </span>
-                                <span>Automated schema creation by cloning 200+ tables, reducing environment setup time from 1-2 hours to <strong>&lt;10 minutes</strong></span>
+                                <span>Engineered large-scale transformations and joins across <strong>300M+ rows</strong>, improving query performance by 40%</span>
                             </li>
                             <li>
                                 <span class="achievement-icon">
@@ -433,7 +464,7 @@
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
                                 </span>
-                                <span>Designed pipelines to union data across three large schemas (<strong>~300M rows</strong>) and built dedicated breast-cancer schemas, improving data completeness to <strong>99%+</strong></span>
+                                <span>Designed controller-based workflow orchestration framework in AWS Glue to dynamically trigger dependent jobs, enabling <strong>fully automated multi-stage pipelines</strong></span>
                             </li>
                             <li>
                                 <span class="achievement-icon">
@@ -441,7 +472,7 @@
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
                                 </span>
-                                <span>Built QC validation schemas and optimized Redshift SQL operations, <strong>reducing production defects by ~50%</strong> and improving job stability by 90%</span>
+                                <span>Refactored legacy scripts into OOP PySpark framework with reusable base class extended by <strong>30+ jobs</strong>, reducing code redundancy</span>
                             </li>
                             <li>
                                 <span class="achievement-icon">
@@ -449,7 +480,7 @@
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
                                 </span>
-                                <span>Automated Precision360 Excel export, reducing manual work from 45-60 minutes to 2-3 minutes (<strong>~95% productivity gain</strong>)</span>
+                                <span>Built data-quality validation pipelines reducing <strong>production defects by 50%</strong>; automated reporting saving analysts <strong>95% manual effort</strong></span>
                             </li>
                         </ul>
                         <div class="timeline-tech">
@@ -483,7 +514,7 @@
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
                                 </span>
-                                <span>Built reusable data blocks for stakeholder use cases including product eligibility, behaviour insights, UX optimization, and digital signature adoption</span>
+                                <span>Designed and deployed scalable PySpark + AWS Glue ETL pipelines for large-scale transactional datasets across <strong>10,000+ standardized tables</strong></span>
                             </li>
                             <li>
                                 <span class="achievement-icon">
@@ -491,7 +522,7 @@
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
                                 </span>
-                                <span>Built end-to-end ingestion and transformation pipeline from DynamoDB to S3, enabling digital signature replacement for manual paper forms</span>
+                                <span>Migrated legacy Informatica workflows to AWS-native Spark architecture, <strong>improving runtime by 40%</strong> and reducing infrastructure costs</span>
                             </li>
                             <li>
                                 <span class="achievement-icon">
@@ -499,7 +530,7 @@
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
                                 </span>
-                                <span>Enabled event-driven data processing with AWS Glue and S3, <strong>speeding up data availability by 40%</strong>. Optimized client data models by reducing schema complexity by ~50%</span>
+                                <span>Designed and orchestrated <strong>100+ production DAGs</strong> using Apache Airflow with retries, SLA alerts, ensuring <strong>99.9% pipeline reliability</strong></span>
                             </li>
                             <li>
                                 <span class="achievement-icon">
@@ -507,7 +538,7 @@
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
                                 </span>
-                                <span>Re-engineered legacy ETL jobs from Informatica to PySpark, <strong>improving performance by ~40%</strong> with AWS-native architecture</span>
+                                <span>Built end-to-end DynamoDB to S3 ingestion pipeline enabling digital signature adoption; designed event-driven patterns for <strong>near real-time analytics</strong></span>
                             </li>
                             <li>
                                 <span class="achievement-icon">
@@ -515,7 +546,7 @@
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
                                 </span>
-                                <span>Designed Airflow DAGs for pipeline orchestration, <strong>reducing manual intervention by 80-90%</strong></span>
+                                <span>Optimized Glue jobs using partition pruning, caching, and Spark tuning; reduced schema complexity by <strong>~50%</strong> improving query performance</span>
                             </li>
                             <li>
                                 <span class="achievement-icon">
@@ -523,7 +554,7 @@
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
                                 </span>
-                                <span>Developed low-code internal tool using Power Apps + Power Automate to streamline assessments across business units</span>
+                                <span>Independently developed low-code internal tool using Power Apps + Power Automate; implemented automated MS Teams alerting for job failures</span>
                             </li>
                         </ul>
                         <div class="timeline-tech">
@@ -1010,7 +1041,7 @@
                         </div>
                         <h3>Download My Resume</h3>
                         <p>Get a detailed overview of my experience, skills, and achievements.</p>
-                        <a href="resume/Satyam_Kumar_Resume.pdf" class="btn btn-primary" download>
+                        <a href="resume/Satyam_Kumar.pdf" class="btn btn-primary" download>
                             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                                 <polyline points="7 10 12 15 17 10"/>
@@ -1064,7 +1095,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Satyam Kumar. All rights reserved.</p>
+                <p>&copy; 2026 Satyam Kumar. Crafted with data-driven precision.</p>
             </div>
         </div>
     </footer>
